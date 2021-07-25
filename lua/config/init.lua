@@ -1,0 +1,8 @@
+require "config.compe"
+require "config.gitsigns"
+require "config.lspinstall"
+require "config.treesitter"
+require "config.vim-better-whitespace"
+require "config.vim-test"
+require "config.nvim-tree"
+require "config.lualine"
