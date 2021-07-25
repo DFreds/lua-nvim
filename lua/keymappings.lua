@@ -92,8 +92,8 @@ local fugitive_mappings = {
 
 local telescope_mappings = {
   n = { -- normal mode
-    { "<leader>tt", "<cmd>Telescope builtin<cr>" },  -- find telescope commands
     { "<leader>f", "<cmd>Telescope find_files<cr>" },  -- find files
+    { "<leader>ss", "<cmd>Telescope builtin<cr>" },  -- find telescope commands
     { "<leader>sr", "<cmd>Telescope oldfiles<cr>" },  -- find recent files
     { "<leader>sg", "<cmd>Telescope live_grep<cr>" },  -- find find with grep
     { "<leader>sb", "<cmd>Telescope buffers<cr>" },  -- find buffers
