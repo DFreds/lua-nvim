@@ -84,8 +84,22 @@ utils.define_augroups {
       "TextYankPost",
       "*",
       "lua vim.highlight.on_yank {on_visual = true}"
-    }
-  }
+    },
+    {
+      "WinEnter",
+      "*",
+      "set cursorline"
+    },
+    {
+      "WinLeave",
+      "*",
+      "set nocursorline"
+    },
+  },
+  _markdown = {
+    { "FileType", "markdown", "setlocal wrap" },
+    { "FileType", "markdown", "setlocal spell" },
+  },
 }
 
 -- TODO autocmds

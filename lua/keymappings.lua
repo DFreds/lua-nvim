@@ -123,29 +123,24 @@ local nvim_compe_mappings = {
 
 local vim_test_mappings = {
   n = { -- normal mode
-    { "<leader>tn", "<cmd>TestNearest<cr>" },
-    { "<leader>tf", "<cmd>TestFile<cr>" },
-    { "<leader>ts", "<cmd>TestSuite<cr>" },
-    { "<leader>tl", "<cmd>TestLast<cr>" },
-    { "<leader>tv", "<cmd>TestVisit<cr>" },
+    { "<leader>tn", "<cmd>TestNearest<cr>" }, -- run nearest test
+    { "<leader>tf", "<cmd>TestFile<cr>" }, -- run tests for file
+    { "<leader>ts", "<cmd>TestSuite<cr>" }, -- run all tests
+    { "<leader>tl", "<cmd>TestLast<cr>" }, -- run last tests you ran
+    { "<leader>tv", "<cmd>TestVisit<cr>" }, -- go to last test file
   }
 }
--- TODO eventually use ultest here when termcodes works??
--- utils.map('n', '<leader>tf', utils.t('<Plug>') .. '(ultest-run-file)', {noremap = false})
--- utils.map('n', '<leader>tf', vim.api.nvim_replace_termcodes('<Plug>(ultest-run-file)', true, true, true), {noremap = false})
 
 local vim_projectionist_mappings = {
   n = { -- normal mode
-    { "<leader>a", "<cmd>A<cr>" },
-    { "<leader>va", "<cmd>AV<cr>" },
+    { "<leader>a", "<cmd>A<cr>" }, -- go to alternate file
+    { "<leader>va", "<cmd>AV<cr>" }, -- split alternate file vertically
   }
 }
 
 local nvim_tree_mappings = {
   n = { -- normal mode
-    -- { "<leader>e", "<cmd>NvimTreeToggle<cr>" },
-    { "<leader>e", "<cmd>lua require 'config.nvim-tree'.toggle_tree()<CR>" },
-    -- { "<leader>E", "<cmd>NvimTreeFindFile<cr>" },
+    { "<leader>e", "<cmd>lua require 'config.nvim-tree'.toggle_tree()<CR>" }, -- toggle the tree and move the buffer tabs
   }
 }
 
@@ -166,12 +161,19 @@ local barbar_mappings = {
 
 local fterm_mappings = {
   n = { -- normal mode
-    { "<leader>tt", "<CMD>lua require('FTerm').toggle()<CR>" },
+    { "<leader>tt", "<CMD>lua require('FTerm').toggle()<CR>" }, -- toggle terminal when it is closed
   },
   t = { -- terminal mode
-    { "<leader>tt", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>" },
+    { "<leader>tt", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>" }, -- toggle terminal when it is open
   }
 }
+
+local dashboard_mappings = {
+  n = { -- normal mode
+    { "<leader>;", "<cmd>Dashboard<cr>" } -- open the dashboard again
+  }
+}
+
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
@@ -181,6 +183,7 @@ utils.register_mappings(vim_projectionist_mappings)
 utils.register_mappings(nvim_tree_mappings)
 utils.register_mappings(barbar_mappings)
 utils.register_mappings(fterm_mappings)
+utils.register_mappings(dashboard_mappings)
 
 --[[
   nvim-bufdel
