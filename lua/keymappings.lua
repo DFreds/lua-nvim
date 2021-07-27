@@ -174,6 +174,13 @@ local dashboard_mappings = {
   }
 }
 
+local ale_mappings = {
+  n = { -- normal mode
+    { "<leader>ap", "<Plug>(ale_previous_wrap)", { noremap = false } },
+    { "<leader>an", "<Plug>(ale_next_wrap)", { noremap = false } },
+  }
+}
+
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
@@ -184,6 +191,7 @@ utils.register_mappings(nvim_tree_mappings)
 utils.register_mappings(barbar_mappings)
 utils.register_mappings(fterm_mappings)
 utils.register_mappings(dashboard_mappings)
+utils.register_mappings(ale_mappings)
 
 --[[
   nvim-bufdel
