@@ -2,6 +2,16 @@ local utils = require "utils"
 
 vim.g.dashboard_disable_at_vimenter = 0
 vim.g.dashboard_default_executive = "telescope"
+vim.g.dashboard_custom_header = {
+  "{___     {__{__         {__{__{__       {__",
+  "{_ {__   {__ {__       {__ {__{_ {__   {___",
+  "{__ {__  {__  {__     {__  {__{__ {__ { {__",
+  "{__  {__ {__   {__   {__   {__{__  {__  {__",
+  "{__   {_ {__    {__ {__    {__{__   {_  {__",
+  "{__    {_ __     {____     {__{__       {__",
+  "{__      {__      {__      {__{__       {__",
+}
+
 vim.g.dashboard_custom_section = {
   a = {
     description = { "  Find File                     " },
