@@ -37,6 +37,7 @@ Plug 'b3nj5m1n/kommentary' " commenting support
 Plug 'hrsh7th/vim-vsnip' " snippets
 Plug 'rafamadriz/friendly-snippets' " more snippets
 
+Plug 'sunjon/shade.nvim' " dim inactive windows
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' } " better testing
 
