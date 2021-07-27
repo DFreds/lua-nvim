@@ -30,6 +30,8 @@ Plug 'ggandor/lightspeed.nvim' " vim sneak on crack
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " file tree
 
+Plug 'numtostr/FTerm.nvim' " Floating terminal
+
 Plug 'b3nj5m1n/kommentary' " commenting support
 
 Plug 'hrsh7th/vim-vsnip' " snippets

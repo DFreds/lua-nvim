@@ -164,6 +164,14 @@ local barbar_mappings = {
   }
 }
 
+local fterm_mappings = {
+  n = { -- normal mode
+    { "<leader>tt", "<CMD>lua require('FTerm').toggle()<CR>" },
+  },
+  t = { -- terminal mode
+    { "<leader>tt", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>" },
+  }
+}
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
@@ -172,6 +180,7 @@ utils.register_mappings(vim_test_mappings)
 utils.register_mappings(vim_projectionist_mappings)
 utils.register_mappings(nvim_tree_mappings)
 utils.register_mappings(barbar_mappings)
+utils.register_mappings(fterm_mappings)
 
 --[[
   nvim-bufdel
