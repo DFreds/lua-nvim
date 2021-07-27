@@ -16,6 +16,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Treesitter syntax
 
 Plug 'lewis6991/gitsigns.nvim' " git gutter signs, requires setup in config
 
+Plug 'glepnir/dashboard-nvim' " dashboard on open
 Plug 'lukas-reineke/indent-blankline.nvim' " show indent lines
 
 Plug 'farmergreg/vim-lastplace' " remember last location in files
@@ -37,7 +38,6 @@ Plug 'b3nj5m1n/kommentary' " commenting support
 Plug 'hrsh7th/vim-vsnip' " snippets
 Plug 'rafamadriz/friendly-snippets' " more snippets
 
-Plug 'sunjon/shade.nvim' " dim inactive windows
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' } " better testing
 

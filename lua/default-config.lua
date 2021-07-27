@@ -78,7 +78,15 @@ utils.register_options(default_options) -- register all default options
 vim.opt.shortmess:append "c" -- don't pass messages to ins-completion-menu
 vim.opt.whichwrap:append "h,l" -- allow specified keys to go to previous/next line when at first/last character
 
-vim.cmd 'autocmd TextYankPost * lua vim.highlight.on_yank {on_visual = true}' -- Highlight on yank
+utils.define_augroups {
+  _general = {
+    {
+      "TextYankPost",
+      "*",
+      "lua vim.highlight.on_yank {on_visual = true}"
+    }
+  }
+}
 
 -- TODO autocmds
 
