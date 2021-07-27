@@ -53,13 +53,57 @@ function utils.define_augroups(definitions)
   end
 end
 
+-- Useful VIM commands
+-- TODO port some to lua when possible
 vim.cmd [[
+function! ToggleQuickFix()
+  if empty(filter(getwininfo(), 'v:val.quickfix'))
+    copen
+  else
+    cclose
+  endif
+endfunction
+
+function! CmdLine(str)
+  call feedkeys(":" . a:str)
+endfunction
+
+function! NewUuid()
+  let l:prefix = '@uuid-'
+  call CmdLine("r !uuidgen|sed \'s/.*/" . l:prefix . "&/\'|tr \"[A-Z]\" \"[a-z]\"")
+endfunction
+
 function! GetUniqueSessionName()
   let path = fnamemodify(getcwd(), ':~:t')
   let path = empty(path) ? 'no-project' : path
   let branch = FugitiveHead()
   let branch = empty(branch) ? '' : '-' . branch
   return substitute(path . branch, '/', '-', 'g')
+endfunction
+
+function! VisualSelection(direction, extra_filter) range
+  let l:saved_reg = @"
+  execute "normal! vgvy"
+
+  let l:pattern = escape(@", "\\/.*'$^~[]")
+  let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+  if a:direction == 'gv'
+    call CmdLine("Ack '" . l:pattern . "' " )
+  elseif a:direction == 'replace'
+    call CmdLine("%s" . '/'. l:pattern . '/')
+  endif
+
+  let @/ = l:pattern
+  let @" = l:saved_reg
+endfunction
+
+function HomeToggle()
+  if (col('.') == 1)
+    normal! ^
+  else
+    normal! 0
+  endif
 endfunction
 ]]
 

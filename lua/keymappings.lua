@@ -7,20 +7,23 @@ local default_mappings = {
     { "jj", "<ESC>" }, -- shortcut for escape
 
     -- Move current line / block with Alt-j/k ala vscode.
-    --[[ { "<A-j>", "<Esc>:m .+1<CR>==gi" },
-    { "<A-k>", "<Esc>:m .-2<CR>==gi" }, ]]
+    { "<A-j>", "<Esc>:m .+1<CR>==gi" },
+    { "<A-k>", "<Esc>:m .-2<CR>==gi" },
+
+    -- Move current line / block with Alt-j/k ala vscode. Weird mappings courtesy of mac
+    { "∆", "<Esc>:m .+1<CR>==gi" },
+    { "˚", "<Esc>:m .-2<CR>==gi" },
 
     -- Terminal window navigation
-    --[[ { "<C-h>", "<C-\\><C-N><C-w>h" },
+    { "<C-h>", "<C-\\><C-N><C-w>h" },
     { "<C-j>", "<C-\\><C-N><C-w>j" },
     { "<C-k>", "<C-\\><C-N><C-w>k" },
-    { "<C-l>", "<C-\\><C-N><C-w>l" }, ]]
+    { "<C-l>", "<C-\\><C-N><C-w>l" },
   },
   n = { -- normal mode
     { ";", ":", { silent = false} }, -- use ; to enter command mode
-
     { "Q", "<nop>" }, -- disable Ex mode
-
+    { "0", "<cmd>call HomeToggle()<cr>" }, -- Toggle jumping between the beginning of the line and the first character
     { "//", "<cmd>nohlsearch<cr>" }, -- clear highlights
 
     { "<C-h>", "<C-w>h" }, -- move left a window easier
@@ -33,14 +36,19 @@ local default_mappings = {
     { "<S-Left>", "<cmd>vertical resize -2<CR>" }, -- make current window smaller vertically
     { "<S-Right>", "<cmd>vertical resize +2<CR>" }, -- make current window bigger vertically
 
-    -- Move current line / block with Alt-j/k a la vscode.
-    --[[ { "<A-j>", ":m .+1<CR>==" },
-    { "<A-k>", ":m .-2<CR>==" }, ]]
+    -- Move current line / block with Alt-j/k ala vscode.
+    { "<A-j>", ":m .+1<CR>==" },
+    { "<A-k>", ":m .-2<CR>==" },
+
+    -- Move current line / block with Alt-j/k ala vscode. Weird mappings courtesy of mac
+    { "∆", ":m .+1<CR>==" },
+    { "˚", ":m .-2<CR>==" },
 
     -- QuickFix
     { "]q", "<cmd>cnext<CR>" },
     { "[q", "<cmd>cprev<CR>" },
 
+    -- replace by barbar mappings
     -- { "<S-l>", "<cmd>bnext<CR>" }, -- move to next buffer
     -- { "<S-h>", "<cmd>bprevious<CR>" }, -- move to previous buffer
 
@@ -49,15 +57,19 @@ local default_mappings = {
 
     { ">", ">>_" }, -- easier adding indent on line
     { "<", "<<_" }, -- easier removing indent on line
+
+    { "<leader>nu", "<cmd>call NewUuid()<cr>" },
+
+    { "<leader>q", "<cmd>call ToggleQuickFix()<cr>" },
   },
   t = { -- terminal mode
     { "<C-o>", [[<C-\><C-n><esc><cr>]] }, -- navigate terminal in normal mode
 
     -- Terminal window navigation
-    --[[ { "<C-h>", "<C-\\><C-N><C-w>h" },
+    { "<C-h>", "<C-\\><C-N><C-w>h" },
     { "<C-j>", "<C-\\><C-N><C-w>j" },
     { "<C-k>", "<C-\\><C-N><C-w>k" },
-    { "<C-l>", "<C-\\><C-N><C-w>l" }, ]]
+    { "<C-l>", "<C-\\><C-N><C-w>l" },
   },
   v = { -- visual/select mode
     { ";", ":", { silent = false} }, -- use ; to enter command mode
@@ -70,8 +82,15 @@ local default_mappings = {
     { "J", ":move '>+1<CR>gv-gv" }, -- move selected line/block down => note, can't use <Cmd>
 
     -- Move current line / block with Alt-j/k ala vscode.
-    --[[ { "<A-j>", ":m '>+1<CR>gv-gv" },
-    { "<A-k>", ":m '<-2<CR>gv-gv" }, ]]
+    { "<A-j>", ":m '>+1<CR>gv-gv" },
+    { "<A-k>", ":m '<-2<CR>gv-gv" },
+
+    -- Move current line / block with Alt-j/k ala vscode. Weird mappings courtesy of mac
+    { "<A-j>", ":m '>+1<CR>gv-gv" },
+    { "<A-k>", ":m '<-2<CR>gv-gv" },
+
+    { "∆", ":m '>+1<CR>gv-gv" },
+    { "˚", ":m '<-2<CR>gv-gv" },
   },
   [""] = {
     -- Toggle the QuickFix window
@@ -176,8 +195,8 @@ local dashboard_mappings = {
 
 local ale_mappings = {
   n = { -- normal mode
-    { "<leader>ap", "<Plug>(ale_previous_wrap)", { noremap = false } },
-    { "<leader>an", "<Plug>(ale_next_wrap)", { noremap = false } },
+    { "[a", "<Plug>(ale_previous_wrap)", { noremap = false } }, -- go to previous ale lint issue
+    { "]a", "<Plug>(ale_next_wrap)", { noremap = false } }, -- go to next ale lint issue
   }
 }
 
@@ -192,14 +211,3 @@ utils.register_mappings(barbar_mappings)
 utils.register_mappings(fterm_mappings)
 utils.register_mappings(dashboard_mappings)
 utils.register_mappings(ale_mappings)
-
---[[
-  nvim-bufdel
-]]
---[[ utils.map('n', '<leader>q', '<cmd>BufDel<CR>'); -- delete the current buffer while maintaining window layout
-utils.map('n', '<leader>x', '<cmd>w<cr><cmd>BufDel<cr>') -- Fast saving and quitting a buffer while maintaining window layout ]]
-
--- vim.cmd 'inoremap <expr> <c-j> ("\\<C-n>")'
--- vim.cmd 'inoremap <expr> <c-k> ("\\<C-p>")'
--- vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
--- vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
