@@ -40,6 +40,8 @@ Plug 'rafamadriz/friendly-snippets' " more snippets
 
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' } " better testing
+" Plug 'mhartington/formatter.nvim' " formatter
+Plug 'dense-analysis/ale' " auto formatting and linting
 
 Plug 'romgrk/barbar.nvim' " tabline
 Plug 'hoob3rt/lualine.nvim' " status line

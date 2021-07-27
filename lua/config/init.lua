@@ -1,5 +1,7 @@
+require "config.ale"
 require "config.compe"
 require "config.dashboard"
+-- require "config.formatter" TODO eventually
 require "config.fterm"
 require "config.gitsigns"
 require "config.indent-blankline"
