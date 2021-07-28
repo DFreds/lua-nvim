@@ -4,6 +4,7 @@ require "config.dashboard"
 -- require "config.formatter" TODO eventually
 require "config.fterm"
 require "config.trouble"
+require "config.bufferline"
 require "config.gitsigns"
 require "config.indent-blankline"
 require "config.lspinstall"

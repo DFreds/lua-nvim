@@ -48,7 +48,7 @@ local default_mappings = {
     { "]q", "<cmd>cnext<CR>" },
     { "[q", "<cmd>cprev<CR>" },
 
-    -- replace by barbar mappings
+    -- replace by bufferline mappings
     -- { "<S-l>", "<cmd>bnext<CR>" }, -- move to next buffer
     -- { "<S-h>", "<cmd>bprevious<CR>" }, -- move to previous buffer
 
@@ -163,18 +163,23 @@ local nvim_tree_mappings = {
   }
 }
 
-local barbar_mappings = {
+local bufferline_mappings = {
   n = { -- normal mode
-    { "<S-l>", "<cmd>BufferNext<cr>" }, -- go to next buffer
-    { "<S-h>", "<cmd>BufferPrevious<cr>" }, -- go to previous buffer
-    { "<leader>c", "<cmd>BufferClose<cr>" }, -- close buffer but keep window layout
-    { "<leader>bj", "<cmd>BufferPick<cr>" }, -- jump to buffer
-    { "<leader>be", "<cmd>BufferCloseAllButCurrent<cr>" }, -- close all but currenty buffer
-    { "<leader>bh", "<cmd>BufferCloseBuffersLeft<cr>" }, -- close all buffers to the left
-    { "<leader>bl", "<cmd>BufferCloseBuffersRight<cr>" }, -- close all buffers to the right
-    -- { "<leader>bs", "<cmd>Telescope buffers<cr>" }, -- find buffers
-    { "<leader>bD", "<cmd>BufferOrderByDirectory<cr>" }, -- sort by directory
-    { "<leader>bL", "<cmd>BufferOrderByLanguage<cr>" }, -- sort by language
+    { "[b", "<cmd>BufferLineCyclePrev<cr>" },
+    { "]b", "<cmd>BufferLineCycleNext<cr>" },
+    { "<leader>bp", "<cmd>BufferLinePick<cr>" },
+  }
+}
+
+local bufdelete_mappings = {
+  n = {
+    { "<leader>bd", "<cmd>Bdelete<cr>" },
+  }
+}
+
+local bufonly_mappings = {
+  n = {
+    { "<leader>bo", "<cmd>BufOnly<cr>" },
   }
 }
 
@@ -213,7 +218,9 @@ utils.register_mappings(nvim_compe_mappings)
 utils.register_mappings(vim_test_mappings)
 utils.register_mappings(vim_projectionist_mappings)
 utils.register_mappings(nvim_tree_mappings)
-utils.register_mappings(barbar_mappings)
+utils.register_mappings(bufferline_mappings)
+utils.register_mappings(bufdelete_mappings)
+utils.register_mappings(bufonly_mappings)
 utils.register_mappings(fterm_mappings)
 utils.register_mappings(dashboard_mappings)
 utils.register_mappings(ale_mappings)
