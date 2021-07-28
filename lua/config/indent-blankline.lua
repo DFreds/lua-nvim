@@ -1,1 +1,1 @@
-vim.g.indentLine_fileTypeExclude = {'dashboard'}
+vim.g.indentLine_fileTypeExclude = {'dashboard', 'NvimTree'}
