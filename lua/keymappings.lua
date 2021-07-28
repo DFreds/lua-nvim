@@ -200,6 +200,12 @@ local ale_mappings = {
   }
 }
 
+local trouble_mappings = {
+  n = { -- normal mode
+    { "<leader>d", "<cmd>TroubleToggle<cr>" },
+  }
+}
+
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
@@ -211,3 +217,4 @@ utils.register_mappings(barbar_mappings)
 utils.register_mappings(fterm_mappings)
 utils.register_mappings(dashboard_mappings)
 utils.register_mappings(ale_mappings)
+utils.register_mappings(trouble_mappings)

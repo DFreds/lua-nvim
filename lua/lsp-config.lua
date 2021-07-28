@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
       { 'gp', "<cmd>lua require 'lsp-config'.PeekDefinition()<cr>" },
       { '<S-k>', '<Cmd>lua vim.lsp.buf.hover()<CR>' },
       { '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>' },
-      { '<leader>d', '<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>' },
+      -- { '<leader>d', '<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>' }, -- replaced with trouble
       { '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>' },
       { ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>' },
     }

@@ -6,6 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'nvim-lua/popup.nvim' " Popup API
 Plug 'nvim-lua/plenary.nvim' " Utility functions
 Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder
+Plug 'folke/trouble.nvim' " diagnostic helper
 Plug 'neovim/nvim-lspconfig' " LSP auto configuration
 Plug 'hrsh7th/nvim-compe' " completion
 Plug 'kabouzeid/nvim-lspinstall' " lsp installer, requires setup in config
