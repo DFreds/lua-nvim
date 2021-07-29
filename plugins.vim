@@ -5,7 +5,10 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'nvim-lua/popup.nvim' " Popup API
 Plug 'nvim-lua/plenary.nvim' " Utility functions
+
 Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " use fzf natively in telescope
+
 Plug 'folke/trouble.nvim' " diagnostic helper
 Plug 'neovim/nvim-lspconfig' " LSP auto configuration
 Plug 'hrsh7th/nvim-compe' " completion
@@ -17,7 +20,6 @@ Plug 'lukas-reineke/indent-blankline.nvim' " show indent lines
 Plug 'farmergreg/vim-lastplace' " remember last location in files
 Plug 'tpope/vim-projectionist' " go between test and implementation files quickly
 Plug 'ntpeters/vim-better-whitespace' " auto stripping of whitespace
-  " 'godlygeek/tabular'; -- auto alignment based on character
 Plug 'ggandor/lightspeed.nvim' " vim sneak on crack
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " file tree
