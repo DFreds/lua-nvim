@@ -26,6 +26,8 @@ local default_mappings = {
     { "0", "<cmd>call HomeToggle()<cr>" }, -- Toggle jumping between the beginning of the line and the first character
     { "//", "<cmd>nohlsearch<cr>" }, -- clear highlights
 
+    {"<C-a>", ":%y+<CR>"}, -- copy the full file content
+
     { "<C-h>", "<C-w>h" }, -- move left a window easier
     { "<C-j>", "<C-w>j" }, -- move down a window easier
     { "<C-k>", "<C-w>k" }, -- move up a window easier
@@ -76,6 +78,8 @@ local default_mappings = {
 
     { "<", "<gv" }, -- reselect visual selection after adding indent on line
     { ">", ">gv" }, -- reselect visual selection after removing indent on line
+
+    { "p", '"_dP' }, -- don't copy the replaced text when pasting
   },
   x = { -- visual mode
     { "K", ":move '<-2<CR>gv-gv" }, -- move selected line/block up => note, can't use <Cmd>
