@@ -1,4 +1,5 @@
 require "config.ale"
+require "config.autopairs"
 require "config.compe"
 require "config.dashboard"
 -- require "config.formatter" TODO eventually
