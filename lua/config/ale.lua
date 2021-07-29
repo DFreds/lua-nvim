@@ -14,5 +14,6 @@ vim.g.ale_linters = {
 vim.g.ale_fixers = {
   javascript = { 'prettier', 'eslint', 'remove_trailing_lines' },
   ruby = { 'rubocop', 'remove_trailing_lines' },
-  markdown = { 'prettier', 'remove_trailing_lines' }
+  markdown = { 'prettier', 'remove_trailing_lines' },
+  lua = { 'lua-format', 'remove_trailing_lines' },
 }
