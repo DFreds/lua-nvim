@@ -211,6 +211,12 @@ local trouble_mappings = {
   }
 }
 
+local zen_mode_mappings = {
+  n = { -- normal mode
+    { "<leader>z", "<cmd>ZenMode<cr>" },
+  }
+}
+
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
@@ -225,3 +231,4 @@ utils.register_mappings(fterm_mappings)
 utils.register_mappings(dashboard_mappings)
 utils.register_mappings(ale_mappings)
 utils.register_mappings(trouble_mappings)
+utils.register_mappings(zen_mode_mappings)
