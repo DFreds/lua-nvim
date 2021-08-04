@@ -221,6 +221,12 @@ local zen_mode_mappings = {
   }
 }
 
+local tabular_mappings = {
+  i = { -- insert mode
+    { "<bar>", "<bar><esc><cmd>call Align()<cr>" }
+  }
+}
+
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
@@ -236,3 +242,4 @@ utils.register_mappings(dashboard_mappings)
 utils.register_mappings(ale_mappings)
 utils.register_mappings(trouble_mappings)
 utils.register_mappings(zen_mode_mappings)
+utils.register_mappings(tabular_mappings)
