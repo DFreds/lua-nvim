@@ -33,10 +33,10 @@ local default_mappings = {
     { "<C-k>", "<C-w>k" }, -- move up a window easier
     { "<C-l>", "<C-w>l" }, -- move right a window easier
 
-    { "<S-Up>", "<cmd>resize -2<CR>" }, -- make current window smaller horizontally
-    { "<S-Down>", "<cmd>resize +2<CR>" }, -- make current window bigger horizontally
-    { "<S-Left>", "<cmd>vertical resize -2<CR>" }, -- make current window smaller vertically
-    { "<S-Right>", "<cmd>vertical resize +2<CR>" }, -- make current window bigger vertically
+    { "<S-Up>", "<cmd>resize -2<CR>" }, -- make current window smaller vertically
+    { "<S-Down>", "<cmd>resize +2<CR>" }, -- make current window bigger vertically
+    { "<S-Left>", "<cmd>vertical resize -2<CR>" }, -- make current window smaller horizontally
+    { "<S-Right>", "<cmd>vertical resize +2<CR>" }, -- make current window bigger horizontally
 
     -- Move current line / block with Alt-j/k ala vscode.
     { "<A-j>", ":m .+1<CR>==" },
@@ -93,6 +93,7 @@ local default_mappings = {
     { "<A-j>", ":m '>+1<CR>gv-gv" },
     { "<A-k>", ":m '<-2<CR>gv-gv" },
 
+    -- Move current line / block with Alt-j/k ala vscode. Weird mappings courtesy of mac
     { "∆", ":m '>+1<CR>gv-gv" },
     { "˚", ":m '<-2<CR>gv-gv" },
   },
