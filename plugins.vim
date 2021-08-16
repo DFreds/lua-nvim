@@ -41,6 +41,7 @@ Plug 'tpope/vim-repeat' " allow for more commands to be repeatable
 Plug 'tpope/vim-dispatch' " async support
 Plug 'tpope/vim-fugitive' " git commands
 Plug 'tpope/vim-bundler' " bundler commands
+Plug 'tpope/vim-surround' " surround commands
 Plug 'folke/zen-mode.nvim' " zen mode
 Plug 'folke/twilight.nvim' " dim inactive parts of the code
 Plug 'junegunn/gv.vim' " git commit browser
