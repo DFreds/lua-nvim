@@ -14,6 +14,7 @@ Plug 'neovim/nvim-lspconfig' " LSP auto configuration
 Plug 'hrsh7th/nvim-compe' " completion
 Plug 'windwp/nvim-autopairs' " auto add pairs like ()
 Plug 'kabouzeid/nvim-lspinstall' " lsp installer, requires setup in config
+Plug 'onsails/lspkind-nvim' " add pictograms to lsp
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Treesitter syntax. Updates parsers on update
 Plug 'lewis6991/gitsigns.nvim' " git gutter signs, requires setup in config
 Plug 'glepnir/dashboard-nvim' " dashboard on open
