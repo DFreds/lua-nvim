@@ -90,10 +90,6 @@ local default_mappings = {
     { "<A-k>", ":m '<-2<CR>gv-gv" },
 
     -- Move current line / block with Alt-j/k ala vscode. Weird mappings courtesy of mac
-    { "<A-j>", ":m '>+1<CR>gv-gv" },
-    { "<A-k>", ":m '<-2<CR>gv-gv" },
-
-    -- Move current line / block with Alt-j/k ala vscode. Weird mappings courtesy of mac
     { "∆", ":m '>+1<CR>gv-gv" },
     { "˚", ":m '<-2<CR>gv-gv" },
   },
