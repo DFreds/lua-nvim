@@ -174,7 +174,7 @@ local bufferline_mappings = {
 
 local bufdelete_mappings = {
   n = {
-    { "<leader>bd", "<cmd>Bdelete<cr>" },
+    { "<leader>bd", "<cmd>Bdelete!<cr>" },
   }
 }
 
