@@ -3,7 +3,6 @@ require "config.autopairs"
 require "config.compe"
 require "config.dashboard"
 -- require "config.formatter" TODO eventually
-require "config.fterm"
 require "config.trouble"
 require "config.bufferline"
 require "config.gitsigns"
