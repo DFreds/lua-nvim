@@ -113,7 +113,7 @@ local fugitive_mappings = {
 local telescope_mappings = {
   n = { -- normal mode
     { "<leader>f", "<cmd>Telescope git_files<cr>" },  -- find git files
-    { "<leader>sf", "<cmd>Telescope find_files<cr>" },  -- find all files
+    { "<leader>sf", "<cmd>Telescope find_files hidden=true<cr>" },  -- find all files
     -- { "<leader>sg", "<cmd>Telescope grep_string<cr>" }, -- find word under cursor
     -- { "<leader>sg", '<cmd>lua require("telescope.builtin").grep_string({ search = vim.fn.input("🔍 ")})<CR>' },
     { "<leader>sg", "<cmd>Telescope live_grep<cr>" },  -- find find with grep
