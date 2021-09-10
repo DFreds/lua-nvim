@@ -26,7 +26,12 @@ local default_mappings = {
     { "0", "<cmd>call HomeToggle()<cr>" }, -- Toggle jumping between the beginning of the line and the first character
     { "//", "<cmd>nohlsearch<cr>" }, -- clear highlights
 
-    {"<C-a>", ":%y+<CR>"}, -- copy the full file content
+    { "c", '"_c' }, -- redirect change operations to black hole
+    { "C", '"_C' }, -- redirect change operations to black hole
+
+    { "<backspace>", "<C-^>" }, -- easy way to switch between the last two buffers
+
+    { "<C-a>", ":%y+<CR>" }, -- copy the full file content
 
     { "<C-h>", "<C-w>h" }, -- move left a window easier
     { "<C-j>", "<C-w>j" }, -- move down a window easier
