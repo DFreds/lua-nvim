@@ -25,7 +25,9 @@ require('nvim-tree').setup {
     files = 1,
     folder_arrows = 1,
   },
-  lsp_diagnostics = 1, -- show lsp diagnostics in the signcolumn
+  diagnostics = {
+    enable = true,
+  },
   tree_ignore = { '.git', 'node_modules', '.cache' }, -- don't show these files/folders in tree
   indent_markers = 1, -- this option shows indent markers when folders are open
 }
