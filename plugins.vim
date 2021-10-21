@@ -38,6 +38,7 @@ Plug 'dense-analysis/ale' " auto formatting and linting
 Plug 'akinsho/nvim-bufferline.lua' " bufferline
 Plug 'famiu/bufdelete.nvim' " delete buffers while keeping window layout
 Plug 'schickling/vim-bufonly' " delete all but current buffer
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " documentation generator
 Plug 'hoob3rt/lualine.nvim' " status line
 Plug 'tpope/vim-rails' " rails support
 Plug 'tpope/vim-repeat' " allow for more commands to be repeatable
