@@ -10,16 +10,25 @@ Plug 'nvim-telescope/telescope.nvim' " Fuzzy finder
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " use fzf natively in telescope
 
 Plug 'folke/trouble.nvim' " diagnostic helper
+
+" LSP stuff
 Plug 'neovim/nvim-lspconfig' " LSP auto configuration
 Plug 'williamboman/nvim-lsp-installer' " lsp installer
-Plug 'hrsh7th/nvim-compe' " completion
-Plug 'windwp/nvim-autopairs' " auto add pairs like ()
 Plug 'onsails/lspkind-nvim' " add pictograms to lsp
+
+" Completion stuff
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 Plug 'kosayoda/nvim-lightbulb' " show lightbulb next to code actions
 Plug 'weilbith/nvim-code-action-menu' " nice code action menu
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Treesitter syntax. Updates parsers on update
 Plug 'lewis6991/gitsigns.nvim' " git gutter signs, requires setup in config
 Plug 'glepnir/dashboard-nvim' " dashboard on open
+Plug 'windwp/nvim-autopairs' " auto add pairs like ()
 Plug 'lukas-reineke/indent-blankline.nvim' " show indent lines
 Plug 'farmergreg/vim-lastplace' " remember last location in files
 Plug 'tpope/vim-projectionist' " go between test and implementation files quickly
@@ -30,8 +39,6 @@ Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " file tree
 Plug 'numtostr/FTerm.nvim' " Floating terminal
 Plug 'b3nj5m1n/kommentary' " commenting support
-Plug 'hrsh7th/vim-vsnip' " snippets
-Plug 'rafamadriz/friendly-snippets' " more snippets
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'mhartington/formatter.nvim' " formatter
 Plug 'dense-analysis/ale' " auto formatting and linting

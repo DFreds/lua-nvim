@@ -135,20 +135,6 @@ local telescope_mappings = {
   },
 }
 
-local nvim_compe_mappings = {
-  i = { -- insert mode
-    { "<C-Space>", "compe#complete()", { expr = true } }, -- open completion menu
-    { "<cr>", "compe#confirm('<CR>')", { expr = true } }, -- open completion menu
-    { "<C-e>", "compe#close('<C-e>')", { expr = true} }, -- close the completion menu
-    { "<Tab>", "v:lua.tab_complete()", { expr = true} }, -- tab to go to the next completion
-    { "<S-Tab>", "v:lua.s_tab_complete()", { expr = true} }, -- shift-tab to go to the previous completion
-  },
-  s = {
-    { "<Tab>", "v:lua.tab_complete()", { expr = true} }, -- tab to go to the next completion
-    { "<S-Tab>", "v:lua.s_tab_complete()", { expr = true} }, -- shift-tab to go to the previous completion
-  }
-}
-
 local vim_test_mappings = {
   n = { -- normal mode
     { "<leader>tn", "<cmd>TestNearest<cr>" }, -- run nearest test
@@ -265,7 +251,6 @@ local lsp_mappings = {
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
 utils.register_mappings(telescope_mappings)
-utils.register_mappings(nvim_compe_mappings)
 utils.register_mappings(vim_test_mappings)
 utils.register_mappings(vim_projectionist_mappings)
 utils.register_mappings(nvim_tree_mappings)
