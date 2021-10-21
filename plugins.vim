@@ -11,9 +11,9 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " use fzf nati
 
 Plug 'folke/trouble.nvim' " diagnostic helper
 Plug 'neovim/nvim-lspconfig' " LSP auto configuration
+Plug 'williamboman/nvim-lsp-installer' " lsp installer
 Plug 'hrsh7th/nvim-compe' " completion
 Plug 'windwp/nvim-autopairs' " auto add pairs like ()
-Plug 'kabouzeid/nvim-lspinstall' " lsp installer, requires setup in config
 Plug 'onsails/lspkind-nvim' " add pictograms to lsp
 Plug 'kosayoda/nvim-lightbulb' " show lightbulb next to code actions
 Plug 'weilbith/nvim-code-action-menu' " nice code action menu
