@@ -41,6 +41,7 @@ Plug 'numtostr/FTerm.nvim' " Floating terminal
 Plug 'b3nj5m1n/kommentary' " commenting support
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'mhartington/formatter.nvim' " formatter
+Plug 'max397574/better-escape.nvim' " escaping insert without delay
 Plug 'dense-analysis/ale' " auto formatting and linting
 Plug 'akinsho/nvim-bufferline.lua' " bufferline
 Plug 'famiu/bufdelete.nvim' " delete buffers while keeping window layout

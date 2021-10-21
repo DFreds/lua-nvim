@@ -2,10 +2,6 @@ local utils = require "utils"
 
 local default_mappings = {
   i = { -- insert mode
-    { "jk", "<ESC>" }, -- shortcut for escape
-    { "kj", "<ESC>" }, -- shortcut for escape
-    { "jj", "<ESC>" }, -- shortcut for escape
-
     -- Move current line / block with Alt-j/k ala vscode.
     { "<A-j>", "<Esc>:m .+1<CR>==gi" },
     { "<A-k>", "<Esc>:m .-2<CR>==gi" },
