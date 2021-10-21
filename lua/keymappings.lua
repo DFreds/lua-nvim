@@ -115,7 +115,7 @@ local telescope_mappings = {
   n = { -- normal mode
     { "<leader>f", "<cmd>Telescope git_files<cr>" },  -- find git files
     { "<leader>sf", "<cmd>Telescope find_files hidden=true<cr>" },  -- find all files
-    -- { "<leader>sg", "<cmd>Telescope grep_string<cr>" }, -- find word under cursor
+    { "<leader>sw", "<cmd>Telescope grep_string<cr>" }, -- find word under cursor
     -- { "<leader>sg", '<cmd>lua require("telescope.builtin").grep_string({ search = vim.fn.input("🔍 ")})<CR>' },
     { "<leader>sg", "<cmd>Telescope live_grep<cr>" },  -- find find with grep
     { "<leader>ss", "<cmd>Telescope builtin<cr>" },  -- find telescope commands
@@ -125,6 +125,7 @@ local telescope_mappings = {
     { "<leader>sh", "<cmd>Telescope help_tags<cr>" },  -- find help tags
     { "<leader>sc", "<cmd>Telescope command_history<cr>" },  -- find command history
     { "<leader>sk", "<cmd>Telescope keymaps<cr>" },  -- find keymaps
+    { "<leader>sl", "<cmd>Telescope resume<cr>" },  -- rerun last search
     { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>" },  -- find in current buffer
     { "<leader>gsc", "<cmd>Telescope git_commits<cr>" },  -- find git commits
     { "<leader>gsb", "<cmd>Telescope git_branches<cr>" },  -- find git branches
