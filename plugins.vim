@@ -39,6 +39,7 @@ Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " file tree
 Plug 'numtostr/FTerm.nvim' " Floating terminal
 Plug 'b3nj5m1n/kommentary' " commenting support
+Plug 'karb94/neoscroll.nvim' " smooth scrolling
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'mhartington/formatter.nvim' " formatter
 Plug 'max397574/better-escape.nvim' " escaping insert without delay
