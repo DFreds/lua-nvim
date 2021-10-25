@@ -125,6 +125,7 @@ local telescope_mappings = {
     { "<leader>sh", "<cmd>Telescope help_tags<cr>" },  -- find help tags
     { "<leader>sc", "<cmd>Telescope command_history<cr>" },  -- find command history
     { "<leader>sk", "<cmd>Telescope keymaps<cr>" },  -- find keymaps
+    { '<leader>s"', "<cmd>Telescope registers<cr>" },  -- find registers
     { "<leader>sl", "<cmd>Telescope resume<cr>" },  -- rerun last search
     { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>" },  -- find in current buffer
     { "<leader>gsc", "<cmd>Telescope git_commits<cr>" },  -- find git commits
