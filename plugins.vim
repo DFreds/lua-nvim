@@ -43,11 +43,11 @@ Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'mhartington/formatter.nvim' " formatter
 Plug 'max397574/better-escape.nvim' " escaping insert without delay
 Plug 'dense-analysis/ale' " auto formatting and linting
-Plug 'akinsho/nvim-bufferline.lua' " bufferline
+Plug 'akinsho/bufferline.nvim' " bufferline
 Plug 'famiu/bufdelete.nvim' " delete buffers while keeping window layout
 Plug 'schickling/vim-bufonly' " delete all but current buffer
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } } " documentation generator
-Plug 'hoob3rt/lualine.nvim' " status line
+Plug 'nvim-lualine/lualine.nvim' " status line
 Plug 'tpope/vim-rails' " rails support
 Plug 'tpope/vim-repeat' " allow for more commands to be repeatable
 Plug 'tpope/vim-dispatch' " async support
