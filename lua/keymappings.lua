@@ -144,6 +144,7 @@ local telescope_mappings = {
     { "<leader>sl", "<cmd>Telescope resume<cr>" },  -- rerun last search
     { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>" },  -- find in current buffer
     { "<leader>gsc", "<cmd>Telescope git_commits<cr>" },  -- find git commits
+    { "<leader>gsbc", "<cmd>Telescope git_bcommits<cr>" },  -- find git buffer commits
     { "<leader>gsb", "<cmd>Telescope git_branches<cr>" },  -- find git branches
   },
 }
