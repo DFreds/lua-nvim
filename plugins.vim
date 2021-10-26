@@ -34,7 +34,11 @@ Plug 'farmergreg/vim-lastplace' " remember last location in files
 Plug 'tpope/vim-projectionist' " go between test and implementation files quickly
 Plug 'ntpeters/vim-better-whitespace' " auto stripping of whitespace
 Plug 'godlygeek/tabular' " alignment helper
+
+" Movement plugins
 Plug 'ggandor/lightspeed.nvim' " vim sneak on crack
+Plug 'phaazon/hop.nvim' " new easy motion
+
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua' " file tree
 Plug 'numtostr/FTerm.nvim' " Floating terminal
@@ -43,6 +47,7 @@ Plug 'karb94/neoscroll.nvim' " smooth scrolling
 Plug 'vim-test/vim-test' " testing in vim support
 " Plug 'mhartington/formatter.nvim' " formatter
 Plug 'max397574/better-escape.nvim' " escaping insert without delay
+Plug 'norcalli/nvim-colorizer.lua' " colors hex codes
 Plug 'dense-analysis/ale' " auto formatting and linting
 Plug 'akinsho/bufferline.nvim' " bufferline
 Plug 'famiu/bufdelete.nvim' " delete buffers while keeping window layout

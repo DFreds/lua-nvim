@@ -111,6 +111,21 @@ local fugitive_mappings = {
   },
 }
 
+local hop_mappings = {
+  n = { -- normal mode
+    { "<leader><leader>w", "<cmd>HopWord<cr>" }, -- Hop to word
+    { "<leader><leader>l", "<cmd>HopLine<cr>" }, -- Hop to line
+  },
+  v = { -- visual mode
+    { "<leader><leader>w", "<cmd>HopWord<cr>" }, -- Hop to word
+    { "<leader><leader>l", "<cmd>HopLine<cr>" }, -- Hop to line
+  },
+  x = { -- visual mode
+    { "<leader><leader>w", "<cmd>HopWord<cr>" }, -- Hop to word
+    { "<leader><leader>l", "<cmd>HopLine<cr>" }, -- Hop to line
+  },
+}
+
 local telescope_mappings = {
   n = { -- normal mode
     { "<leader>f", "<cmd>Telescope git_files<cr>" },  -- find git files
@@ -248,6 +263,7 @@ local lsp_mappings = {
 
 utils.register_mappings(default_mappings)
 utils.register_mappings(fugitive_mappings)
+utils.register_mappings(hop_mappings)
 utils.register_mappings(telescope_mappings)
 utils.register_mappings(vim_test_mappings)
 utils.register_mappings(vim_projectionist_mappings)
