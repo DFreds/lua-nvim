@@ -1,6 +1,10 @@
 -- Setup nvim-cmp.
 local cmp = require'cmp'
 
+--[[ local feedkey = function(key, mode)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+end ]]
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -21,13 +25,31 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
       select = true,
-    })
+    }),
+    --[[ ['<Tab>'] = cmp.mapping(function(fallback)
+      if vim.fn['vsnip#available']() == 1 then
+        feedkey('<Plug>(vsnip-expand-or-jump)', '')
+      elseif cmp.visible() then
+        cmp.confirm({select = true })
+      else
+        fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function()
+      if vim.fn['vsnip#jumpable'](-1) == 1 then
+        feedkey('<Plug>(vsnip-jump-prev)', '')
+      elseif cmp.visible() then
+        cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+      end
+    end, { 'i', 's' }), ]]
   },
   sources = {
     { name = 'nvim_lsp' },
     -- For vsnip user.
     { name = 'vsnip' },
     { name = 'buffer' },
+    { name = 'calc' },
+    { name = 'path' },
   }
 })
 --[[ require "compe".setup {
