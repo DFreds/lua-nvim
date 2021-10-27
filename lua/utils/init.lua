@@ -53,6 +53,8 @@ end
 -- Useful VIM commands
 -- TODO port some to lua when possible
 vim.cmd [[
+command -nargs=? DevDocs call system('type open &>/dev/null && open https://devdocs.io/#q=<args> || xdg-open https://devdocs.io/#q=<args>')
+
 function! Align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)

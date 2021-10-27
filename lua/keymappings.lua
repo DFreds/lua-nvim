@@ -61,9 +61,10 @@ local default_mappings = {
     { ">", ">>_" }, -- easier adding indent on line
     { "<", "<<_" }, -- easier removing indent on line
 
-    { "<leader>nu", "<cmd>call NewUuid()<cr>" },
+    { "<leader>nu", "<cmd>call NewUuid()<cr>" }, -- generate a new UUID
 
-    { "<leader>q", "<cmd>call ToggleQuickFix()<cr>" },
+    { "<leader>q", "<cmd>call ToggleQuickFix()<cr>" }, -- show or hide the quickfix
+    { "<leader>sd", "<cmd>execute 'DevDocs ' . expand('<cword>')<cr>"}, -- open https://devdocs.io and search for the word under the cursor
   },
   t = { -- terminal mode
     { "<C-o>", [[<C-\><C-n><esc><cr>]] }, -- navigate terminal in normal mode
