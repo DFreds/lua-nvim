@@ -43,6 +43,7 @@ local default_options = {
   hidden = true, -- switch between buffers without having to save first
   history = 500, -- how many commands to remember
   hlsearch = true, -- highlight all matches on previous search
+  icm = "split", -- text substitution applies in the buffer and shows changes in split window
   ignorecase = true, -- ignore case when searching
   mouse = "i", -- allow the mouse to be used in insert mode in neovim
   number = true, -- show line numbers
