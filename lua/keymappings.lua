@@ -235,31 +235,24 @@ local tabular_mappings = {
 
 local lsp_mappings = {
   n = { -- normal mode
-    { '<leader>j', '<Cmd>lua vim.lsp.buf.code_action()<CR>' },
-    { 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>' },
-    { 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>' },
-    { 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>' },
-    { 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>' },
-    { 'gp', "<cmd>lua require 'lsp-config'.PeekDefinition()<cr>" },
-    { '<S-k>', '<Cmd>lua vim.lsp.buf.hover()<CR>' },
-    { '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>' },
-    -- { '<leader>d', '<cmd>lua vim.diagnostic.set_loclist()<cr>' }, -- replaced with trouble
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    { 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>' },
+    { 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>' },
+    { 'K', '<cmd>lua vim.lsp.buf.hover()<CR>' },
+    { 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>' },
+    -- { '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>' },
+    { '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>' },
+    { '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>' },
+    { '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>' },
+    { '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>' },
+    { '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>' },
+    { '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>' },
+    { 'gr', '<cmd>lua vim.lsp.buf.references()<CR>' },
+    { '<leader>ce', '<cmd>lua vim.diagnostic.open_float()<CR>' },
     { '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>' },
     { ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>' },
-  -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  -- buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  -- buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  -- buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-
-  -- buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', opts)
-
-  -- Set some keybinds conditional on server capabilities
-  --[[ if client.resolved_capabilities.document_formatting then
-    buf_set_keymap("n", "<leader>q", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-  elseif client.resolved_capabilities.document_range_formatting then
-    buf_set_keymap("n", "<leader>q", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
-  end ]]
+    { '<leader>cq', '<cmd>lua vim.diagnostic.setloclist()<CR>' },
+    { '<leader>cf', '<cmd>lua vim.lsp.buf.formatting()<CR>' },
   }
 }
 
