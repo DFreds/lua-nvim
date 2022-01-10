@@ -77,7 +77,7 @@ local function setup_servers()
 
       if server.name == "tsserver" then
         -- Remove "File is a CommonJS module" error
-        opts.handlers = {
+        --[[ opts.handlers = {
           ["textDocument/publishDiagnostics"] = function(_, _, params, client_id, _, config)
             if params.diagnostics ~= nil then
               local idx = 1
@@ -89,9 +89,9 @@ local function setup_servers()
                 end
               end
             end
-            vim.diagnostic.on_publish_diagnostics(_, _, params, client_id, _, config)
+            vim.lsp.diagnostic.on_publish_diagnostics(_, _, params, client_id, _, config)
           end,
-        }
+        } ]]
       end
 
       -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
