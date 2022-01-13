@@ -54,9 +54,7 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'nvim_lua' },
     { name = 'vsnip' }, -- For vsnip user.
-    { name = 'buffer' },
     { name = 'calc' },
-    { name = 'path' },
   }
 })
 
@@ -67,11 +65,9 @@ cmp.setup.cmdline('/', {
   }
 })
 
--- Use cmdline & path source for ':'.
+-- Use cmdline for  ':'.
 cmp.setup.cmdline(':', {
   sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
     { name = 'cmdline' }
   })
 })

@@ -1,4 +1,5 @@
-require('nvim-tree').setup {
+local nvim_tree = require('nvim-tree')
+nvim_tree.setup {
   tree_icons = {
     default = "",
     symlink = "",
@@ -37,9 +38,9 @@ local nvimtree = {}
 local _, view = pcall(require, "nvim-tree.view")
 nvimtree.toggle_tree = function()
   if view.win_open() then
-    require("nvim-tree").close()
+    nvim_tree.close()
   else
-    require("nvim-tree").find_file(true)
+    nvim_tree.find_file(true)
   end
 end
 
