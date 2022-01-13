@@ -65,6 +65,8 @@ Plug 'folke/twilight.nvim' " dim inactive parts of the code
 Plug 'junegunn/gv.vim' " git commit browser
 Plug 'sainnhe/gruvbox-material' " colorscheme gruvbox
 
+Plug 'luukvbaal/stabilize.nvim' " stabilize windows
+
 " Initialize plugin system
 call plug#end()
 
