@@ -169,7 +169,7 @@ local vim_projectionist_mappings = {
 
 local nvim_tree_mappings = {
   n = { -- normal mode
-    { "<leader>e", "<cmd>lua require 'config.nvim-tree'.toggle_tree()<CR>" }, -- toggle the tree and move the buffer tabs
+    { "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>" }, -- toggle the tree
   }
 }
 
